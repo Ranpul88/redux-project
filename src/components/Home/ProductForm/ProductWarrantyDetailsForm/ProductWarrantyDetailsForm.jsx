@@ -1,4 +1,5 @@
 import InputField from "../../../common/form/InputField.jsx";
+import FormHandlingButton from "../../../common/form/FormHandlingButton.jsx";
 
 const ProductWarrantyDetailsForm = ({ handlePreviousForm }) => {
   return (
@@ -25,12 +26,11 @@ const ProductWarrantyDetailsForm = ({ handlePreviousForm }) => {
           name="warranty_end_date"
           labelName="Warranty end date"
         />
-        <button
-          onClick={handlePreviousForm}
-          className="text-white bg-gray-700 box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"
-        >
-          Back to basic details
-        </button>
+        <FormHandlingButton
+          executingMethod={handlePreviousForm}
+          buttonName="Back to basic details"
+          buttonStyle="text-white bg-gray-700 box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"
+        />
       </form>
     </div>
   );
